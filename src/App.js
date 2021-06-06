@@ -19,7 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/login' component={Login} />
-            <Route path='/teacherDashboard' component={ requireAuth(Tdashboard) } />
+            <Route path='/teacherDashboard' component={requireAuth(Tdashboard) } />
             <Route path='/studentDashboard' component={ requireAuth(Sdashboard) } />
             <Route path='/teacherclassactivity/:classId' component={ requireAuth(ClassActivity) } />
             <Route path='/studentclassactivity/:classId' component={ requireAuth(StudentActivity) } />

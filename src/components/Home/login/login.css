@@ -23,14 +23,20 @@
     padding-bottom: 80px;
 }
 
+.shadow-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow: {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .right {
-    width: 500px;
-    background-color: #fff;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;  
-    padding-top: 80px;
-    padding-left: 80px;    
-    padding-bottom: 80px;  
+    height: 100%;
 }
 
 .lcontent{
@@ -79,7 +85,7 @@
 }
 
 .rnav:hover {
-    background-color: #71B307;
+    background-color: #00C6C5;
     color: #FFFFFF    
 }
 

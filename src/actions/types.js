@@ -1,3 +1,5 @@
+export const IS_LOADING = 'IS_LOADING';
+
 //auth types
 export const EMAIL_CHANGED = 'email_changed'
 export const PASSWORD_CHANGED = 'password_changed'

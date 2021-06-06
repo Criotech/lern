@@ -43,17 +43,19 @@ class Tdashboard extends Component {
             <div>
                 <Theader name={userFullName} role={userRole} onLogout={this.onLogout.bind(this)} />
                 {/* papper section */}
-                <section className="paper" style={{paddingLeft: 10}}>
+                {/* <section className="paper" style={{paddingLeft: 10}}>
                     <button className= {(this.state.class)?'navActive paperChild':'paperChild'} onClick={this.onPageClass.bind(this)} >
                         Classes
                     </button>
                    
-                </section>
+                </section> */}
                 <hr/>
                 {/* paper section ends here */}
             
                 {/* class list section */}
+
                       {this.renderPage()}
+                
                 {/* end of class list */}
             </div>
         )

@@ -21,6 +21,7 @@ export const createClass = ({ className, classImage }) => {
                 dispatch(fetchClassData())
             })
             .catch((error) => {
+                console.log(error.response)
                 if (error.message === "Network Error") {
                     dispatch(flashMessage({ message: "connect to internet" }))
                 } else if (error.response.data.message) {
