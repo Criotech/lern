@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import swal from '@sweetalert/with-react'
-import { Modal } from 'react-bootstrap'
 import { Table } from 'react-bootstrap'
 import { getStudentsProfile } from '../../../../actions';
 

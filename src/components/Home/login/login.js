@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import './login.css';
 import {connect} from 'react-redux';
-import Navbar from '../nav.js';
-import LoginNote from './loginNote';
-import {Link} from 'react-router-dom';
 import {
   emailChanged,
   passwordChanged,
@@ -96,7 +93,7 @@ class Login extends Component {
   }
 
   render () {
-    const active = '#518005';
+    // const active = '#518005';
 
     return (
       <div className="container">

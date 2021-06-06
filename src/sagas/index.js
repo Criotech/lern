@@ -1,5 +1,5 @@
 import * as firebase from 'firebase';
-import { CHAT_SEND, CHAT_RECIEVE, SEND_CLASSID, SEND_REPLY } from '../actions/types'
+import { CHAT_SEND, SEND_CLASSID, SEND_REPLY } from '../actions/types'
 import { update_chat_room, update_reply_message } from '../actions';
 import { put, take, call, fork } from 'redux-saga/effects';
 import { eventChannel } from 'redux-saga';

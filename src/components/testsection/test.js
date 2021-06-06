@@ -117,7 +117,7 @@ class Test extends Component {
     render() {
         let data = this.props.test
         // console.log(this.props.test.testData)
-        let { choice, questionIndex, seconds, minutes, hours } = this.state
+        let { questionIndex, seconds, minutes, hours } = this.state
         if (hours===0 && minutes===0 && seconds===1){
             let correctAns = this.props.test.testData.map((data, index) => {
             return parseInt(data.userAns) === parseInt(data.answer)

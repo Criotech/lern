@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { FETCH_TEST_DATA, FLASH_MESSAGE, UPDATE_ANS, FETCH_PROFILE, RESET_TEST } from './types'
+import { FETCH_TEST_DATA, FLASH_MESSAGE, UPDATE_ANS, FETCH_PROFILE } from './types'
 
 export const createTest = ({ classId, questions }) => {
     console.log(questions)

@@ -13,7 +13,7 @@ class IntroTest extends Component {
     }
 
     onSubmit() {
-        const { classId, studentName, studentId } = this.props.location.state
+        const { classId, studentId } = this.props.location.state
         this.props.checkIfEnrolled({ classId, studentId })
         // this.props.updateStatus({ classId, studentId })
     }

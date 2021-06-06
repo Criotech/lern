@@ -67,7 +67,7 @@ class StudentActivity extends Component {
                 {/* video section */}
                  <div style={{display: (this.props.url)?"block":"none"}}>
                     <div className="embed-responsive embed-responsive-21by9">
-                    <iframe className="embed-responsive-item" src={this.props.url} allowFullScreen></iframe>
+                    <iframe title="vid" className="embed-responsive-item" src={this.props.url} allowFullScreen></iframe>
                     </div>
                 </div>  
                 {/* video section ends here */}
