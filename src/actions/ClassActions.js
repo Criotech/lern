@@ -15,7 +15,7 @@ export const createClass = ({ className, classImage }) => {
         const data = new FormData()
         data.append('className', className)
         data.append('classImage', classImage)
-        axios.post("http://learnacademyapi.herokuapp.com/class/teacher", data)
+        axios.post("https://learnacademyapi.herokuapp.com/class/teacher", data)
             .then(res => {
                 dispatch(flashMessage({ message: res.data.message }))
                 dispatch(fetchClassData())
@@ -33,7 +33,7 @@ export const createClass = ({ className, classImage }) => {
 
 export const fetchClassData = () => {
     return (dispatch) => {
-        axios.get('http://learnacademyapi.herokuapp.com/class/teacher')
+        axios.get('https://learnacademyapi.herokuapp.com/class/teacher')
             .then((res) => {
                 dispatch(getClassData(res.data))
             })
@@ -50,7 +50,7 @@ export const fetchClassData = () => {
 export const deleteClass = (classId) => {
     return (dispatch) => {
         dispatch({ type: DELETE_CLASS })
-        axios.delete(`http://learnacademyapi.herokuapp.com/class/teacher/${classId}`)
+        axios.delete(`https://learnacademyapi.herokuapp.com/class/teacher/${classId}`)
             .then(res => {
                 dispatch(flashMessage({ message: res.data.message }))
                 dispatch(fetchClassData())
@@ -69,7 +69,7 @@ export const deleteClass = (classId) => {
 export const addStudent = ({ classId, studentMail }) => {
     return (dispatch) => {
         dispatch({ type: ADD_STUDENT })
-        axios.post(`http://learnacademyapi.herokuapp.com/class/teacher/${classId}/addStudent`, { studentMail })
+        axios.post(`https://learnacademyapi.herokuapp.com/class/teacher/${classId}/addStudent`, { studentMail })
             .then(res => {
                 dispatch(flashMessage({ message: res.data.message }))
                 dispatch(getStudentsDetails(classId))
@@ -84,7 +84,7 @@ export const addStudent = ({ classId, studentMail }) => {
 // teacher gets studentsDetails from a single class 
 export const getStudentsDetails = (classId) => {
     return (dispatch) => {
-        axios.get(`http://learnacademyapi.herokuapp.com/class/teacher/members/${classId}`)
+        axios.get(`https://learnacademyapi.herokuapp.com/class/teacher/members/${classId}`)
             .then(res => {
                 dispatch(getStudentsData(res.data))
             })
@@ -99,7 +99,7 @@ export const joinClass = (classId) => {
     return (dispatch) => {
         dispatch({ type: CREATE_CLASS, payload: true })
 
-        axios.post("http://learnacademyapi.herokuapp.com/class/student", { classId })
+        axios.post("https://learnacademyapi.herokuapp.com/class/student", { classId })
             .then(res => {
                 dispatch(flashMessage({ message: res.data.message }))
                 dispatch(fetchStudentClassData())
@@ -116,7 +116,7 @@ export const joinClass = (classId) => {
 
 export const fetchStudentClassData = () => {
     return (dispatch) => {
-        axios.get('http://learnacademyapi.herokuapp.com/class/student')
+        axios.get('https://learnacademyapi.herokuapp.com/class/student')
             .then((res) => {
                 console.log(res.data)
                 dispatch(getClassData(res.data))

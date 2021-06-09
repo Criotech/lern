@@ -48,7 +48,7 @@ export const signup = ({email, password, role, fullName}) => {
   return dispatch => {
     dispatch ({type: IS_LOADING});
     axios
-      .post ('http://learnacademyapi.herokuapp.com/users/signup', {
+      .post ('https://learnacademyapi.herokuapp.com/users/signup', {
         email,
         password,
         role,
@@ -74,7 +74,7 @@ export const login = ({email, password}) => {
   return dispatch => {
     dispatch ({type: IS_LOADING});
     axios
-      .post ('http://learnacademyapi.herokuapp.com/users/login', {
+      .post ('https://learnacademyapi.herokuapp.com/users/login', {
         email,
         password,
       })
